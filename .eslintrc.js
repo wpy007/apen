@@ -9,7 +9,7 @@ module.exports = {
   env: {
     browser: true,
   },
-  extends: 'airbnb-base',
+  extends: ['airbnb-base'],
   // required to lint *.vue files
   plugins: [
     'html'
@@ -34,6 +34,11 @@ module.exports = {
       optionalDependencies: ['test/unit/index.js']
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+
+    // diy规则
+    'no-console': 'off', // 允许console
+    'no-param-reassign': 'off', // 允许给函数参数赋值
+    'semi': ['warn', 'never'] // 末尾不允许分号
   }
 }

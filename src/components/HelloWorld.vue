@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    {{msg}}
+    <van-notice-bar mode="closeable">
+      {{msg}}
+    </van-notice-bar>
     <p>我的{{tokenId}}</p>
   </div>
 </template>

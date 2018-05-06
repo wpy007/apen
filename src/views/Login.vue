@@ -7,12 +7,17 @@
       </div>
       <div class="input-box">
         <input class="input-area" :type="passwordInput" placeholder="请输入密码">
-        <i style="color: pink" @click="isPasswordShow = !isPasswordShow">see</i>
+        <i style="color: pink" @click="isPasswordShow = !isPasswordShow">{{isPasswordShow ? 'see' : 'hide'}}</i>
       </div>
     </div>
     <router-link
       tag="p" to="/HelloWorld"
       class="no-login">免登录入口</router-link>
+    <router-link tag="p"
+      to="/Caculator"
+      class="no-login caculator">
+      计算器入口
+    </router-link>
   </div>
 </template>
 
@@ -76,5 +81,8 @@ export default {
     top: calc(50% + 70px + 20px)
     transform: translateX(-50%)
     color: #e76594
+
+  .caculator
+    margin-top: 50px
 </style>
 

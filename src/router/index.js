@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Login from '@/views/Login'
 import HelloWorld from '@/components/HelloWorld'
+import Caculator from '@/views/Caculator'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/HelloWorld',
       name: 'HelloWorld',
       component: HelloWorld,
+    },
+    {
+      path: '/Caculator',
+      name: 'Caculator',
+      component: Caculator,
     },
     {
       path: '/',

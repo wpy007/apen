@@ -53,6 +53,9 @@ export default {
       operateList,
     }
   },
+  mounted() {
+    console.log('caculator route', this.$router, this.$route)
+  },
 }
 </script>
 

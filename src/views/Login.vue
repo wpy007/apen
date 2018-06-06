@@ -18,6 +18,11 @@
       class="no-login caculator">
       计算器入口
     </router-link>
+    <router-link tag="p"
+      to="/Audio"
+      class="no-login audio">
+      音频进度条入口
+    </router-link>
   </div>
 </template>
 
@@ -34,9 +39,18 @@ export default {
       return this.isPasswordShow ? 'text' : 'password'
     },
   },
-
+  created() {
+    // vue每次进入页面，无论是前进还是后退，都会触发生命周期
+    // console.log('come')
+  },
   mounted() {
-
+    // console.log('login route', this.$router, this.$route)
+    // console.log(this.$router)
+  },
+  beforeRouteLeave(to, from, next) {
+    // console.log('login leave')
+    // console.log('to && from && next', to, from, next)
+    next(true)
   },
 }
 </script>
@@ -84,5 +98,8 @@ export default {
 
   .caculator
     margin-top: 50px
+
+  .audio
+    margin-top 80px
 </style>
 

@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     back() {
-      console.log('this.route', this.$router, this.$route)
+      // console.log('this.route', this.$router, this.$route)
       this.$router.back()
     },
     go() {

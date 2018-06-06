@@ -5,6 +5,8 @@ import Login from '@/views/Login'
 import HelloWorld from '@/components/HelloWorld'
 import Caculator from '@/views/Caculator'
 
+import AudioPage from '@/views/AudioPage'
+
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +26,11 @@ export default new Router({
       path: '/Caculator',
       name: 'Caculator',
       component: Caculator,
+    },
+    {
+      path: '/Audio',
+      name: 'Audio',
+      component: AudioPage,
     },
     {
       path: '/',

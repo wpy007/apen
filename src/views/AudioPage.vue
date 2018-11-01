@@ -24,6 +24,13 @@
       </div>
     </div>
 
+    <div class="demo-box">
+      <audio ref="audiox" class="demo-audio"
+        src="http://fs.w.kugou.com/201806051512/655db847a2e827401414f02c5152ab77/G001/M00/1D/17/oYYBAFS3on6AfcA-AEdy2BykLG4055.mp3"
+        controls></audio>
+    </div>
+
+
   </div>
 </template>
 
@@ -192,5 +199,18 @@ export default {
   line-height 34px
   flex 1
 
+
+.demo-box
+  margin-top 30px
+  width 100%
+  height 34px
+  background cyan
+  text-align center
+  overflow hidden
+  .demo-audio
+    width 80%
+    // height 34px
+    margin-top 17px
+    transform translateY(-50%)
 
 </style>

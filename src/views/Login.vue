@@ -32,6 +32,7 @@ export default {
   data() {
     return {
       isPasswordShow: false,
+      leaveleftClickTimes: 3,
     }
   },
   computed: {
@@ -42,6 +43,16 @@ export default {
   created() {
     // vue每次进入页面，无论是前进还是后退，都会触发生命周期
     // console.log('come')
+
+    window.addEventListener('beforeunload', (e) => {
+      if (!this.leaveleftClickTimes) {
+        return true
+      }
+      this.leaveleftClickTimes--  // eslint-disable-line no-plusplus
+    //   e.preventDefault()
+      e.returnValue = '关闭提示'  // 唉，不是我想要的东西
+      return false
+    })
   },
   mounted() {
     // console.log('login route', this.$router, this.$route)
